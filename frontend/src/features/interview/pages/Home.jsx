@@ -55,7 +55,15 @@ const Home = () => {
     if (loading) {
         return (
             <main className='loading-screen'>
-                <h1>Loading your interview plan...</h1>
+                <div className="loading-content">
+                    <div className="spinner-container">
+                        <div className="spinner-outer"></div>
+                        <div className="spinner-inner"></div>
+                        <div className="spinner-center"></div>
+                    </div>
+                    <h1>Analyzing your profile...</h1>
+                    <p>Our AI is crafting your personalized interview strategy. This usually takes about 30 seconds.</p>
+                </div>
             </main>
         )
     }

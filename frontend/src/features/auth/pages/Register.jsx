@@ -19,7 +19,19 @@ const Register = () => {
     }
 
     if (loading) {
-        return (<main className="auth-dashboard"><h1>Loading...</h1></main>)
+        return (
+            <main className='loading-screen'>
+                <div className="loading-content">
+                    <div className="spinner-container">
+                        <div className="spinner-outer"></div>
+                        <div className="spinner-inner"></div>
+                        <div className="spinner-center"></div>
+                    </div>
+                    <h1>Creating your profile...</h1>
+                    <p>Setting up your account for interview success.</p>
+                </div>
+            </main>
+        )
     }
 
     return (

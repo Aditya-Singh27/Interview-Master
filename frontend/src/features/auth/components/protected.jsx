@@ -5,8 +5,20 @@ import { Navigate } from "react-router";
 const Protected = ({ children }) => {
     const {loading, user} = useAuth()
 
-    if(loading){
-        return (<main><h1>Loading...</h1></main>)
+    if (loading) {
+        return (
+            <main className='loading-screen'>
+                <div className="loading-content">
+                    <div className="spinner-container">
+                        <div className="spinner-outer"></div>
+                        <div className="spinner-inner"></div>
+                        <div className="spinner-center"></div>
+                    </div>
+                    <h1>Checking authentication...</h1>
+                    <p>Verifying your session for a secure experience.</p>
+                </div>
+            </main>
+        )
     }
     
     if(!user){
